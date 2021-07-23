@@ -33,6 +33,10 @@ ul {
   width: 34px;
 }
 
+.square.red {
+  color: red;
+}
+
 .square:focus {
   outline: none;
 }

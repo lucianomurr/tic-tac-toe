@@ -11,13 +11,20 @@ const lines = [
 
 export default function CalculateWinner(squares) {
 
+    const winner = {
+        player: null,
+        elements: null
+    };
+
     for(let i = 0; i < lines.length; i++){
         const [a, b, c] = lines[i];
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]){
-        console.log(`The winner is ${squares[a]}`)
-        return squares[a];
+        console.log(`The winner is ${squares[a]}`, lines[i])
+        winner.player = squares[a];
+        winner.elements = lines[i]
         }
     }
-    return null;
 
+    return winner;
+    
 }
