@@ -34,13 +34,13 @@ jobs:
 
       # Install NPM packages
       - name: install NPM packages
-        run: npm ci
+        run: yarn
         
       - name: Build project
-        run: npm run build
+        run: yarn build
         
       - name: Test
-        run: npm run test
+        run: yarn test
         
       - name: upload production build
         uses: actions/upload-artifact@v2
